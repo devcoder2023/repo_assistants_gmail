@@ -1,0 +1,304 @@
+:root {
+    /*
+      في الفليكس العمود
+      لموازنة من يمين ويسار 
+      من خلال
+      align-items
+      
+      ولموازنة من فوق وتحت
+      من خلال
+      justify-content
+      
+    */
+    --color-primary: #2C3A4A ;/* #2C3A4A; /* الخلفية داكن الهيدر */
+    --color-primary-light: #F2F6FF; /* الخلفية فاتح المحتوى */ /* D1DBE8 */
+    --color-secondry: #FFF; /* أبيض */
+    --color-spaceupload: #6990f2;
+    
+    --font-color-primary: #F2F6FF; /* wirh primary */
+    --font-color-primary-light: #2C3A4A; /* wirh primary-light */
+    --font-color-secondry: #042336; /* wirh secondry */
+    --font-color-secondry-gray: #A2AABD; /* #AEAEAE wirh secondry */
+    --font-color-white: #FFF;
+    
+    --color-button: #4070f4; /* الافتراضي أزرق */
+    --color-btnsuccess: #2DC291; /* #00DFA2; /* أخضر الموافقة */
+    --color-btnsuccess-hover: #35E8AC;
+    --color-btnclear: #aaa; /* رصاصي التنظيف */
+    --color-btnupdate: #f70; /* برتقالي التحديث */
+    --color-btndelete: #f44; /* أحمر يميل البرتقالي الحذف*/
+    --color-background-hidden: #00FFFFFF;
+    --color-warning: #FFE569;
+    --color-border-wire: #A2AABD;
+    
+    
+    
+    --font-primary: "NotoKufi"; /* "almarai" "NotoKufi" شبيهه بس أكبر في الحجم */
+    --font-secondry: "LiberationSans";
+    
+    --font-size-xsm: 8px;
+    --font-size-sm: 10px;
+    --font-size-mid: 14px;
+    --font-size-mid2: 16px;
+    --font-size-larg: 18px;
+    --font-size-xlarg: 22px;
+    --font-weight-sm: 400;
+    --font-weight-mid: 800;
+    
+    --radius-mid: 4px;
+    --radius-larg: 8px;
+    --radius-xlarg: 10px;
+  }
+  @font-face {
+      font-family: "NotoKufi";
+      src: url(fonts/NotoKufiArabic-Regular.ttf);
+  }
+  @font-face {
+      font-family: "LiberationSans";
+      src: url(fonts/LiberationSans-Regular.ttf);
+  }
+  
+
+
+* {
+    box-sizing: border-box;
+    /* direction: rtl; */
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* منتصف رأسي  ^| */
+    justify-content: flex-start; /* منتصف عرضي <-> */
+    font-family: var(--font-primary) , var(--font-secondry) ;
+    background: var(--color-primary);
+}
+
+.wrraper {
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    
+    background-color: var(--color-primary-light);
+    /* border: 1px solid red; */
+}
+
+.widget {
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+    /* border: 1px solid red; */
+
+}
+
+.containerButtons {
+    width: 100%;
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    
+    /* border: 1px solid blue; */
+
+}
+
+.containerChat {
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+
+    overflow-y: scroll;
+    
+    background-color: var(--color-secondry);
+    border-radius: 8px;
+    /* border: 1px solid green; */
+}
+
+.buttons {
+    width: 100%;
+    height: 40px;
+    min-height: 40px;
+    max-width: 180px;
+    min-width: 180px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: var(--color-primary);
+    color: var(--font-color-primary);
+    border-radius: var(--radius-mid);
+    border: none;
+    outline: none;
+    font-size: var(--font-size-mid2);
+    font-weight: var(--font-weight-mid);
+    
+    transition: all 0.3s linear;
+    cursor: pointer;
+    
+}
+.buttons:hover {
+    /*box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;*/
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+
+    list-style-type: none;
+
+    gap: 10px;
+}
+
+.list li {
+    width: 100%;
+  
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    justify-content: center;
+  
+    /* border: 1px dashed orange; */
+  }
+  
+
+/*
+    GMAIL
+*/
+
+.cardemail {
+  width: 100%;
+  /* height: 100%; */
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  border: 1px solid lightslategray;
+  border-radius: 4px;
+
+}
+.cardemail .cardemailheader {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: lightslategrey;
+  gap: 40px;
+}
+
+.cardemail h3 {
+  width: 100%;
+  color: lightcoral;
+}
+.cardemail p {
+  width: 100%;
+
+}
+
+
+
+/*
+    ASSISTANTS
+*/
+
+
+.list.listAssistants {
+    flex-direction: column-reverse;
+}
+
+
+
+
+
+/*
+.list.listAssistants li {
+    width: 100%;
+  
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    justify-content: center;
+  
+    border: 1px dashed orange;
+  }
+  */
+.cardchat {
+    width: 100%;
+    
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: transparent;
+}
+.cardchat.cardleft {
+    justify-content: flex-start;
+}
+.cardchat.cardright {
+    justify-content: flex-end;
+}
+.cardchat.carderror {
+    justify-content: flex-end;
+}
+
+.cardbody {
+    /*width: 80%;*/
+    max-width: 75%;
+    
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    
+    background-color: yellow;
+    border-radius: 6px;
+}
+.cardchat.cardleft .cardbody {
+    background-color: #A0E9FF;
+}
+.cardchat.cardright .cardbody {
+    background-color: #8ADAB2;
+}
+.cardchat.carderror .cardbody {
+    background-color: #FCE09B;
+    font-size: 12px;
+    padding: 5px 10px;
+}
